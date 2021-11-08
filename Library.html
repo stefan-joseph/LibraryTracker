@@ -21,11 +21,6 @@
         const newbook = document.querySelector('#newbook');
         let remove = document.querySelectorAll('.remove');
         
-           
-        
-
-        
-
     
         const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', '295', 'no');
         const theJoke = new Book('The Joke', 'Milan Kundera', '315', 'yes');
@@ -47,26 +42,6 @@
         function addBookToLibrary (newBook) {
             myLibrary.push(newBook);
         }
-
-        // function addToPage (bookNumber) {
-        //     for (i = bookNumber; i < myLibrary.length; i++) {
-        //         let book = myLibrary[bookNumber];
-    
-        //         let bookSpace = document.createElement('li');
-        //         bookSpace.classList.add(`book${i+1}`);
-        //         bookSpace.textContent = `${book.info()} `;
-        //         bookshelf.appendChild(bookSpace);
-
-        //         let removeButton = document.createElement('button')
-        //         removeButton.classList.add('remove');
-        //         removeButton.setAttribute('id', `${i}`)
-        //         removeButton.textContent = 'Remove';
-        //         bookSpace.appendChild(removeButton)
-                
-        //         remove = document.querySelectorAll('.remove');
-        //         console.log(remove);
-        //     }
-        // }
 
         function updatePage () {
             while (bookshelf.firstChild) {
@@ -103,7 +78,6 @@
         
 
         newbook.addEventListener('click', () => {
-            //create form input 
             let bookNumber = myLibrary.length
             let newBookTitle = window.prompt('Enter book title:', '');
             let newBookAuthor = window.prompt('Enter author:', '');
@@ -127,12 +101,7 @@
                 myLibrary.splice(button.id, 1);
                 updatePage();
             })
-        };
-
-
-        
-
-        
+        }; 
     </script>
 </body>
 </html>
